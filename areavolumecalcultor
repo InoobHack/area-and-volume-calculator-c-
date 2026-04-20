@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 void Cone() {
     float hack, anon;
     const float pi4 = 3.141592;
@@ -9,13 +10,13 @@ void Cone() {
         cin.clear();
         cin.ignore(1000, '\n');
         cout << "Only numbers allowed: ";
-       Cone();
+        Cone();
         return;
     } 
-   float answer = 0.33333333333 * pi4 * hack * hack * anon;
-   cout << "Volume = " << answer << "(Hit run to do again)";
-    
+    float answer = 0.33333333333 * pi4 * hack * hack * anon;
+    cout << "Volume = " << answer << "(Hit run to do again)";
 }
+
 void Cylinder() {
     float d, i;
     const float pi3 = 3.141592;
@@ -28,16 +29,16 @@ void Cylinder() {
         Cylinder();
         return;
     } 
- float mark = pi3 * d * d * i;
- cout << "Volume = " << mark << "(Hit run to do again)";
-    
+    float mark = pi3 * d * d * i;
+    cout << "Volume = " << mark << "(Hit run to do again)";
 }
+
 void Sphere() {
     float v;
-    const  float pi2 = 3.141592;
-     cout << "What is radius(seperated by space, only decimals): ";
-     cin >> v; 
-     if(cin.fail()){
+    const float pi2 = 3.141592;
+    cout << "What is radius(seperated by space, only decimals): ";
+    cin >> v; 
+    if(cin.fail()){
         cin.clear();
         cin.ignore(1000, '\n');
         cout << "Only numbers allowed: ";
@@ -48,10 +49,11 @@ void Sphere() {
     float higa = 1.33333333333 * pi2 * v * v * v;
     cout << "Volume = " << higa << "(Hit run to do again)";
 }
+
 void recprism() {
-    float jake, omar,sarah;
+    float jake, omar, sarah;
     cout << "What is lenght width height(seperated by space, only decimals): ";
-    cin >> jake >> omar>>sarah;
+    cin >> jake >> omar >> sarah;
     if(cin.fail()){
         cin.clear();
         cin.ignore(1000, '\n');
@@ -63,6 +65,7 @@ void recprism() {
     float result7 = jake * omar * sarah;
     cout << "Volume = " << result7 << "(Hit run to do again)";
 }
+
 void Cube() {
     float r;
     cout << "What is the Edge(seperated by space, only decimals): ";
@@ -75,9 +78,10 @@ void Cube() {
         return;
     } 
 
-   float result6 = r * r *r;
-   cout << "Volume = " << result6 << "(Hit run to do again)";
+    float result6 = r * r * r;
+    cout << "Volume = " << result6 << "(Hit run to do again)";
 }
+
 void Rectangle(){
     float a, q;
     cout << "What is the length and width(seperated by space, only decimals): ";
@@ -96,7 +100,7 @@ void Rectangle(){
 }
 
 void Triangle() {
-    float f,g;
+    float f, g;
     cout << "What is Base and Height(only decimals, seperated by space): ";
     cin >> f >> g;
 
@@ -149,7 +153,7 @@ void Para() {
 }
 
 void trap() {
-    float e,r,t;
+    float e, r, t;
     cout << "What is base 1 base 2 and height(only decimal, seperate by space): ";
     cin >> e >> r >> t;
 
@@ -255,11 +259,12 @@ void client() {
                 cout << arr3[d][n];
             }
         }
-    }
- int choice3;
- cout << "\nWhat Volume do you want to find: ";
- cin >> choice3;
-   if(cin.fail()){
+
+        int choice3;
+        cout << "\nWhat Volume do you want to find: ";
+        cin >> choice3;
+
+        if(cin.fail()){
             cin.clear();
             cin.ignore(1000, '\n');
             cout << "\nOnly numbers allowed: ";
@@ -272,20 +277,21 @@ void client() {
             client();
             return;
         }
-        //write if for the calcultor shapes
-if(choice3 == 1){
-    Cube();
-} else if(choice3 == 2){
-    recprism();
-} else if(choice3 == 3){
-    Sphere();
-} else if(choice3 == 4){
-    Cylinder();
-} else if(choice3 == 5){
-    Cone();
+
+        if(choice3 == 1){
+            Cube();
+        } else if(choice3 == 2){
+            recprism();
+        } else if(choice3 == 3){  
+            Sphere();
+        } else if(choice3 == 4){
+            Cylinder();
+        } else if(choice3 == 5){
+            Cone();
+        }
+    }
 }
 
-}
 int main() {
     client();
 }
