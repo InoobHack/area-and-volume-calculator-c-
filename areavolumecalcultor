@@ -1,6 +1,7 @@
+
 #include <iostream>
 using namespace std;
-
+#include <cmath>
 void Cone() {
     float hack, anon;
     const float pi4 = 3.141592;
@@ -14,6 +15,7 @@ void Cone() {
         return;
     } 
     float answer = 0.33333333333 * pi4 * hack * hack * anon;
+    round(answer);
     cout << "Volume = " << answer << "(Hit run to do again)";
 }
 
@@ -30,7 +32,10 @@ void Cylinder() {
         return;
     } 
     float mark = pi3 * d * d * i;
+    round(mark);
     cout << "Volume = " << mark << "(Hit run to do again)";
+
+    
 }
 
 void Sphere() {
@@ -47,6 +52,7 @@ void Sphere() {
     } 
 
     float higa = 1.33333333333 * pi2 * v * v * v;
+    round(higa);
     cout << "Volume = " << higa << "(Hit run to do again)";
 }
 
@@ -63,6 +69,7 @@ void recprism() {
     } 
 
     float result7 = jake * omar * sarah;
+    round(result7);
     cout << "Volume = " << result7 << "(Hit run to do again)";
 }
 
@@ -79,6 +86,7 @@ void Cube() {
     } 
 
     float result6 = r * r * r;
+    round(result6);
     cout << "Volume = " << result6 << "(Hit run to do again)";
 }
 
@@ -96,6 +104,7 @@ void Rectangle(){
     } 
 
     float result = a * q;
+    round(result);
     cout << "Area = " << result << "(Hit run to do again)";
 }
 
@@ -113,6 +122,7 @@ void Triangle() {
     } 
 
     float result2 = 0.5 * (f * g);
+    round(result2);
     cout << "Area = " << result2 << "(Hit run to do again)";
 }
 
@@ -132,6 +142,7 @@ void Circle() {
     } 
 
     float result3 = pi * z * z;
+    round(result3);
     cout << "Area = " << result3 << "(Hit run to do again)";
 } 
 
@@ -149,6 +160,7 @@ void Para() {
     }
 
     float result4 = p * v;
+    round(result4);
     cout << "Area = " << result4 << "(Hit run to do again)";
 }
 
@@ -166,6 +178,7 @@ void trap() {
     }
 
     float result5 = 0.5 * (e + r) * t;
+    round(result5);
     cout << "Area = " << result5 << "(Hit run to do again)";
 } 
 
